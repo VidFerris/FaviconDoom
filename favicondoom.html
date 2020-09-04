@@ -1,0 +1,37 @@
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>favidoom</title>
+    <style type="text/css">
+      .dosbox-container { width: 640px; height: 400px; }
+      .dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/DOOM.png); }
+    </style>
+  </head>
+  <body>
+    <div id="dosbox"></div>
+    <br/>
+    <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
+    <script type="text/javascript">
+      var dosbox = new Dosbox({
+        id: "dosbox",
+        onload: function (dosbox) {
+          dosbox.run("https://js-dos.com/cdn/upload/DOOM-@evilution.zip", "./DOOM/DOOM.EXE");
+        },
+        onrun: function (dosbox, app) {
+          console.log("App '" + app + "' is runned");
+        }
+      });
+	  
+	  function dosboxToCanvas() {
+		var c = document.getElementsByClassName("dosbox-canvas")[0];
+		var canvasContext = c.getContext("2d");
+		canvasContext.scale(0.05, 0.066666666666);
+		changeFavicon(c.toDataURL("image/x-icon"));
+		canvasContext.scale(20, 15);
+	}
+	setInterval(dosboxToCanvas, 50);
+	<script src="https://gist.github.com/mathiasbynens/428626.js"></script>
+	
+  </body>
+</html>
