@@ -1,4 +1,5 @@
 # [click here to play doom in your favicon](https://vidferris.github.io/FaviconDoom/favicondoom.html)
+also it only seems to work in firefox but whatever
 
 # what
 doom, rendered into a browser favicon. also rendered in the document so you can see it i guess
