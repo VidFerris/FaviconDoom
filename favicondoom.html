@@ -1,8 +1,9 @@
 <html lang="en-us">
   <head>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20x='0'%20y='14'%3E😃%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>favidoom</title>
+    <title>js-dos api</title>
     <style type="text/css">
       .dosbox-container { width: 640px; height: 400px; }
       .dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/DOOM.png); }
@@ -31,7 +32,23 @@
 		canvasContext.scale(20, 15);
 	}
 	setInterval(dosboxToCanvas, 50);
-	<script src="https://gist.github.com/mathiasbynens/428626.js"></script>
+	
+	// snippet from https://gist.github.com/mathiasbynens/428626
+	document.head = document.head || document.getElementsByTagName('head')[0];
+
+	function changeFavicon(src) {
+	 var link = document.createElement('link'),
+		 oldLink = document.getElementById('dynamic-favicon');
+	 link.id = 'dynamic-favicon';
+	 link.rel = 'shortcut icon';
+	 link.href = src;
+	 if (oldLink) {
+	  document.head.removeChild(oldLink);
+	 }
+	 document.head.appendChild(link);
+	}
+	  
+    </script>
 	
   </body>
 </html>
