@@ -1,3 +1,6 @@
+#play now
+https://vidferris.github.io/FaviconDoom/favicondoom.html
+
 # what
 doom, rendered into a browser favicon. also rendered in your main monitor so you can see it
 
