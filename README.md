@@ -9,7 +9,7 @@ Had to be me. Someone else might have gotten it wrong.
 ~ [Mordin Solus](https://www.youtube.com/watch?v=1lfJMIwHDEM)
 
 # how
-[JS-DOS](https://js-dos.com/) renders to a canvas object, [toDataURL](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL) converts canvas objects to a data URL, Favicons can be set to a dataURL. It's just chaining it all together. There's also a downscale before turning it into a dataurl, which seemed to make it a bit faster, but that could just be confirmation bias on my end.
+[JS-DOS](https://js-dos.com/) renders to a canvas object, [toDataURL](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL) converts canvas objects to a data URL, Favicons can be set to a dataURL. It's just chaining it all together.
 
 # special thanks
 Without the existence of [Defender of the Favicon](http://www.p01.org/defender_of_the_favicon/) I probably wouldn't have realised this was possible. Also to [this StackOverflow answer](https://stackoverflow.com/a/62438464), which sent me down the rabbit hole. [This gist](https://gist.github.com/mathiasbynens/428626) from Mathias Bynens also made it all way easier. And of course this wouldn't be possible without [JS-DOS](https://js-dos.com/).
