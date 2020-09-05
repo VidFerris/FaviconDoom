@@ -10,6 +10,17 @@
     </style>
   </head>
   <body>
+	  <button onclick="showhide()">Show in window/Favicon Only</button> 
+   <script type="text/javascript">
+   function showhide() {
+   if(document.getElementById("dosbox").style.display == 'none'){
+		document.getElementById("dosbox").style.display = 'block';
+		}else{
+		document.getElementById("dosbox").style.display = 'none';
+		}
+   }
+   </script>
+	  
     <div id="dosbox"></div>
     <br/>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
@@ -53,6 +64,6 @@
 	}
 	  
     </script>
-  <a href="https://github.com/VidFerris/FaviconDoom">github repo</a>
+  arrow keys to move, ctrl to shoot, space to interact. works in firefox, doesn't work in chrome, probably a dice roll with other browsers. <a href="https://github.com/VidFerris/FaviconDoom">github repo.</a>
   </body>
 </html>
