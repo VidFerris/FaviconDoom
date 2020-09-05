@@ -24,14 +24,18 @@
         }
       });
 	  
+	  var favicanvas = document.createElement('canvas');
+	  favicanvas.width = 32;
+	  favicanvas.height = 32;
+	  var faviContext = favicanvas.getContext("2d");
+	  
 	  function dosboxToCanvas() {
 		var c = document.getElementsByClassName("dosbox-canvas")[0];
 		var canvasContext = c.getContext("2d");
-		canvasContext.scale(0.05, 0.066666666666);
-		changeFavicon(c.toDataURL("image/x-icon"));
-		canvasContext.scale(20, 15);
+		faviContext.drawImage(c, 0, 0, 32, 32);
+		changeFavicon(favicanvas.toDataURL("image/x-icon"));
 	}
-	setInterval(dosboxToCanvas, 50);
+	setInterval(dosboxToCanvas, 20);
 	
 	// snippet from https://gist.github.com/mathiasbynens/428626
 	document.head = document.head || document.getElementsByTagName('head')[0];
